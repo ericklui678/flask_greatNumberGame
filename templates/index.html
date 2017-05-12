@@ -10,14 +10,15 @@
             <h1>Welcome to the Great Number Game</h1>
             <p>I am thinking of a number between 1 and 100</p>
             <p>Take a guess!</p>
-            <h2 id= {{ id }}> {{msg}}</h2>
+            <h2 id= {{id}}> {{msg}}</h2>
             <form action="/process" method="post">
-                <input type="text" name="userInput">
-                <input type="submit" name="submit">
+                <input type="hidden" name="action" value="check">
+                <input class= {{hideClass}} type="text" name="userInput">
+                <input class= {{hideClass}} type="submit" name="submit">
             </form>
-            <form action="/process" method="post">
+            <form method="post" action="/process">
                 <input type="hidden" name="action" value="reset">
-                <input id="resetHide" type="text" name="reset">
+                <input id= {{resetId}} type="submit" value="Play again!">
             </form>
         </div>
     </body>
