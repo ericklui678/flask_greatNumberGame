@@ -9,7 +9,7 @@ def index():
     try:
         userNum = session['userNum']
     except KeyError: # if userNum is undefined, just render index.html
-        return render_template('index.html', resetId='resetHide', hideClass='show', id='hide')
+        return render_template('index.html', resetId='resetHide', hideClass='show')
     else: # if userNum is defined
         userNum = str(userNum)  # convert input from unicode to str
         print randomNum

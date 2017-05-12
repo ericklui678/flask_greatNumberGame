@@ -10,10 +10,6 @@ h2{
     margin: auto;
 }
 
-#hide{
-    opacity: 0;
-}
-
 #red{
     background-color: red;
     width: 200px;
