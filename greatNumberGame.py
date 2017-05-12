@@ -44,6 +44,7 @@ def saveRandomNum():
     if request.form['action'] == 'reset':
         global randomNum
         randomNum = random.randrange(1,101)
+        session.clear()
         return redirect('/')
 
 app.run(debug = True)
